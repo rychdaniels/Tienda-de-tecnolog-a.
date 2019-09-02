@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Pagina web hecha con Bootstrap</title>
+</head>
+
+<body>
+    <header>
+        <!-- navbar-inverse el color sera negro
+            nav-static-top sera estatico y estara en la parte de arriba
+        -->
+        <nav class="nabvar navbar-inverse nav-static-top">
+            <div class="container">
+                <!-- Encabezado del menu -->
+                <div class="nav-header">
+                    <a href="#" class="navbar-brand">Tienda de electrónicos</a>
+                    <!-- collapse sirve para que sea un menu desplegable -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#btn-colapsar">
+                        <span class="sr-only">Navegacion</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Elementos del menu -->
+                <div class="collapse navbar-collapse" id="btn-colapsar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Inicio</a></li>
+                        <!-- Esta pestaña llamada productos tendra un submenu -->
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Productos <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Computadoras</a></li>
+                                <li><a href="#">Laptops</a></li>
+                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">Drones</a></li>
+                                <li><a href="#">Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+
+                    <!-- Formulario de busqueda -->
+                    <!-- formulario de tipo navbar y situado a la derecha -->
+                    <form action="" class="navbar-form navbar-right">
+                        <!-- Debemos meterlo dentro de un grupo -->
+                        <div class="form-goup">
+                            <input type="text" class="form-control" placeholder="Buscar">
+                            <!--Donde se ingresará el texto-->
+                            <button type="submit" class="btn btn-default">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <section class="main">
+        <div class="container">
+            <!-- Fila para el slider -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- El id se ocupa en la lista li -->
+                    <div id="slider" class="carousel slide" data-ride="carousel">
+                        <!-- Indicadores -->
+                        <ol class="carousel-indicators">
+                            <!-- Aqui se definen cuantas imagenes tendremos en el slider -->
+                            <li data-target="#slider" data-slide-to="0" class="item"></li>
+                            <li data-target="#slider" data-slide-to="1"></li>
+                            <li data-target="#slider" data-slide-to="2"></li>
+                            <li data-target="#slider" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Contenedor del slides -->
+                        <!--carousel-inner permite colocar una imagen y ennseguida otra-->
+                        <div class="carousel-inner">
+                            <!-- Aqui comenzamos a insertar las imagenes -->
+                            <div class="item active">
+                                <img src="img/s1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/s2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/s3.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/s4.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- Controles -->
+                        <!-- Control para avanzar en la imagen, los iconos ya vienen con bootstrap -->
+                        <a href="#slider" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Anterior</span><!--sr-only se utiliza para dispositivos como kindle ya que no pueden leer el icono-->
+                        </a>
+                        <a href="#slider" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeria. Fila para mostrar los productos -->
+            <div class="row">
+                <!-- Esta parte solo muestra el texto que dice Galeria -->
+                <div class="col-md-12">
+                    <div class="page header">
+                        <h1 class="text-center">Galeria</h1>
+                    </div>
+                </div>
+                
+                <!--Para web responsive tenemos 
+                    -En tamaño extra pequeño hasta mediano las imagenes ocuparan 6 col. cada imagen
+                    -En tamaño mediano en adelante las imagenes ocuparan 3 col. cada imagen
+                 -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <!-- Con ayuda de thumbnail empezamos a crear cada una de las cajas para los productos -->
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/1.jpg" alt="">
+                        </a>
+                        <!-- Caption sirve para agregar un titulo y una descipcion al producto -->
+                        <div class="caption">
+                            <h3>Tablet</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <!-- Agregamos dos botones para que usuario pueda saber mas del producto -->
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/2.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Laptop</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/3.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Monitor</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/4.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Ipad</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/5.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Teclado</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/6.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Impresora</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/7.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Laptop</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Otro thumbnail para una imagen diferente -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="img/8.jpg" alt="">
+                        </a>
+                        <div class="caption">
+                            <h3>Tablet</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Detalles </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Este es el pie de la pagina -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <!-- pull-left coloca el texto a la izquierda -->
+                    <p class="pull-left">
+                        <!-- Aqui va la direccion de la pagina -->
+                        TiendaDeElectronica.com
+                        <!-- Estos son dos enlaces que brindan informacion adicional a la pagina -->
+                        <a href="#">Acerca de</a>
+                        <a href="#">Contacto</a>
+                    </p>
+                    <!-- pull-left coloca el texto a la derecha -->
+                    <p class="pull-right">
+                        <a href="#">Subir en pagina</a><!-- Este enlace nos llevara hasta arriba de la pagina -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
